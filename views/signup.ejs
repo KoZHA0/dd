@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Signup | Suly Cinema</title>
+    <link rel="stylesheet" href="/logincss.css" />
+</head>
+
+<body>
+    <div class="wrapper">
+        <h1>🎬 Suly Cinema</h1>
+        <h2>Register</h2>
+
+        <ul class="messages">
+            <% if (typeof errors !='undefined' ) { %>
+                <% errors.forEach(error=> { %>
+                    <li class="error">
+                        <%= error.message %>
+                    </li>
+                    <% }) %>
+                        <% } %>
+        </ul>
+
+        <form action="/signup" method="POST">
+            <div class="input-box">
+                <input name="name" type="text" placeholder="Enter your name" required />
+            </div>
+            <div class="input-box">
+                <input name="email" type="email" placeholder="Enter your email" required />
+            </div>
+            <div class="input-box">
+                <input name="password" type="password" placeholder="Create password" required />
+            </div>
+            <div class="input-box">
+                <input name="password2" type="password" placeholder="Confirm password" required />
+            </div>
+
+            <div class="policy">
+                <label>
+                    <input type="checkbox" required />
+                    I accept all terms & conditions
+                </label>
+            </div>
+
+            <div class="input-box button">
+                <input type="submit" value="Register Now" />
+            </div>
+
+            <div class="text">
+                <p>Already have an account? <a href="/login">Login now</a></p>
+                <p><a href="/">← Back to Home</a></p>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

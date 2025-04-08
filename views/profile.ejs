@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>User Profile - Suly Cinema</title>
+  <link rel="stylesheet" href="/profilecss.css" />
+</head>
+
+<body>
+  <div class="profile-container">
+    <header>
+      <h1>Suly Cinema - Profile</h1>
+    </header>
+
+    <section class="user-info">
+      <img src="https://placehold.co/100x100?text=<%= user.name ? user.name.charAt(0) : 'U' %>" alt="Profile Picture"
+        class="profile-pic" />
+      <div class="details">
+        <p><strong>Name:</strong>
+          <%= user.name %>
+        </p>
+        <p><strong>Email:</strong>
+          <%= user.email %>
+        </p>
+        <p><strong>Phone:</strong>
+          <%= user.phone || '+000000000' %>
+        </p>
+        <form action="/edit_profile" method="get">
+          <button class="btn">Edit Profile</button>
+        </form>
+      </div>
+    </section>
+
+    <section class="bookings">
+      <h2>Upcoming Bookings</h2>
+
+      <% if (upcomingBookings && upcomingBookings.length> 0) { %>
+        <% upcomingBookings.forEach(booking=> { %>
+          <div class="booking-card">
+            <p><strong>Movie:</strong>
+              <%= booking.movie %>
+            </p>
+            <p><strong>Date:</strong>
+              <%= booking.date %>
+            </p>
+            <p><strong>Time:</strong>
+              <%= booking.time %>
+            </p>
+            <p><strong>Seats:</strong>
+              <%= booking.seats %>
+            </p>
+            <button class="btn cancel">Cancel Booking</button>
+          </div>
+          <% }) %>
+            <% } else { %>
+              <p>No upcoming bookings.</p>
+              <% } %>
+    </section>
+
+    <section class="history">
+      <h2>Booking History</h2>
+
+      <% if (bookingHistory && bookingHistory.length> 0) { %>
+        <% bookingHistory.forEach(history=> { %>
+          <div class="booking-card">
+            <p><strong>Movie:</strong>
+              <%= history.movie %>
+            </p>
+            <p><strong>Date:</strong>
+              <%= history.date %>
+            </p>
+            <p><strong>Status:</strong>
+              <%= history.status %>
+            </p>
+            <button class="btn">Download Ticket</button>
+          </div>
+          <% }) %>
+            <% } else { %>
+              <p>No booking history available.</p>
+              <% } %>
+    </section>
+
+    <footer>
+      <form action="/logout" method="GET">
+        <button type="submit" class="btn logout">Logout</button>
+      </form>
+    </footer>
+  </div>
+</body>
+
+</html>

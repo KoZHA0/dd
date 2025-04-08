@@ -1,0 +1,167 @@
+/* Global Reset and Base Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: linear-gradient(to right, #1f1c2c, #928dab);
+    color: #fff;
+    overflow-x: hidden;
+}
+
+/* Header */
+header {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: #f8f8f8;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #fcb045;
+}
+
+/* Movie Detail Section */
+.movie-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 40px;
+    gap: 50px;
+}
+
+.movie-poster img {
+    max-width: 300px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.3);
+}
+
+.movie-details {
+    max-width: 600px;
+    text-align: left;
+}
+
+.movie-details h1 {
+    font-size: 3rem;
+    color: #fcb045;
+    margin-bottom: 20px;
+}
+
+.movie-details p {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+}
+
+.movie-details strong {
+    font-weight: bold;
+}
+
+/* Book button */
+.book-btn {
+    background: #fcb045;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #1f1c2c;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+    margin-top: 20px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.book-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(255, 64, 64, 0.6);
+}
+
+
+footer {
+    background: #1f1c2c;
+    padding: 40px 20px;
+    text-align: center;
+    color: #ccc;
+}
+
+.social-icons {
+    margin: 15px 0;
+    font-size: 1.3rem;
+}
+
+.social-icons i {
+    margin: 0 10px;
+    color: #fcb045;
+    transition: color 0.3s ease;
+}
+
+.social-icons i:hover {
+    color: #ffda77;
+}
+
+
+.hidden {
+    display: none;
+}
+
+
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .carousel {
+        flex-direction: column;
+    }
+
+    .movie-container {
+        flex-direction: column;
+        padding: 30px;
+    }
+
+    .movie-poster img {
+        max-width: 250px;
+        margin-bottom: 20px;
+    }
+
+    .movie-details h1 {
+        font-size: 2.2rem;
+    }
+
+    .movie-details p {
+        font-size: 1rem;
+    }
+}

@@ -1,0 +1,125 @@
+/* Global Reset and Base Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: linear-gradient(to right, #1f1c2c, #928dab);
+    color: #fff;
+    overflow-x: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+/* Form Wrapper Styling */
+.wrapper {
+    width: 100%;
+    max-width: 400px;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+/* Headings */
+.wrapper h1 {
+    color: #fcb045;
+    margin-bottom: 10px;
+}
+
+.wrapper h2 {
+    margin-bottom: 20px;
+    font-weight: 300;
+    color: #ddd;
+}
+
+/* Input Box */
+.input-box {
+    margin: 20px 0;
+}
+
+.input-box input {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    font-size: 1em;
+}
+
+.input-box input::placeholder {
+    color: #aaa;
+}
+
+/* Submit Button */
+.input-box.button input {
+    background: #fcb045;
+    color: #1f1c2c;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.input-box.button input:hover {
+    background: #ffda77;
+}
+
+/* Options & Links */
+.options {
+    text-align: right;
+    margin-top: -10px;
+    font-size: 0.9em;
+}
+
+.options a {
+    color: #fcb045;
+    text-decoration: none;
+}
+
+.options a:hover {
+    text-decoration: underline;
+}
+
+.text {
+    margin-top: 20px;
+    font-size: 0.95em;
+}
+
+.text a {
+    color: #fcb045;
+    text-decoration: none;
+}
+
+.text a:hover {
+    text-decoration: underline;
+}
+
+/* Messages */
+.messages {
+    list-style: none;
+    margin-bottom: 20px;
+    padding: 0;
+}
+
+.messages li {
+    padding: 8px;
+    border-radius: 5px;
+    margin-bottom: 8px;
+}
+
+.messages .error {
+    background-color: #c0392b;
+    color: #fff;
+}
+
+.messages .success {
+    background-color: #27ae60;
+    color: #fff;
+}

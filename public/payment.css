@@ -1,0 +1,181 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css');
+
+/* Use the base styles from your template first */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: linear-gradient(to right, #1f1c2c, #928dab);
+    color: #fff;
+    overflow-x: hidden;
+}
+
+/* Header */
+header {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: #f8f8f8;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #fcb045;
+}
+
+/* Payment Section */
+.payment-section {
+    max-width: 600px;
+    margin: 80px auto;
+    padding: 40px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+    text-align: left;
+}
+
+.payment-section h2 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+
+.payment-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group select {
+    padding: 12px 16px;
+    border-radius: 8px;
+    border: none;
+    font-size: 16px;
+    color: #1f1c2c;
+    background-color: #f0f0f0;
+}
+
+.checkbox-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.checkbox-group label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.checkbox-group input {
+    accent-color: #fcb045;
+}
+
+.checkbox-group label:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.form-group.half {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.form-group.half>div {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Button */
+.pay-button {
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #1f1c2c;
+    background: linear-gradient(to right, #fcb045, #ffda77);
+    border: none;
+    border-radius: 50px;
+    box-shadow: 0 4px 15px rgba(252, 176, 69, 0.4);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    align-self: center;
+}
+
+.pay-button:hover {
+    background: linear-gradient(to right, #ffda77, #fcb045);
+    transform: translateY(-2px);
+}
+
+/* Footer */
+footer {
+    background: #1f1c2c;
+    padding: 40px 20px;
+    text-align: center;
+    color: #ccc;
+}
+
+.social-icons i {
+    font-size: 20px;
+    margin: 10px;
+    color: #fcb045;
+    cursor: pointer;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .form-group.half {
+        flex-direction: column;
+    }
+
+    .payment-section {
+        margin: 40px 20px;
+        padding: 30px;
+    }
+
+    .payment-section h2 {
+        font-size: 28px;
+    }
+}

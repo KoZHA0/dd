@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Payment | Suly Cinema</title>
+    <link rel="stylesheet" href="../payment.css" />
+
+</head>
+
+<body>
+    <header>
+        <div class="logo">Suly Cinema</div>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/showtime">Showtimes</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="payment-section">
+        <h2>Select Showtime & Pay</h2>
+        <form class="payment-form">
+            <div class="form-group">
+                <label>Select Movie:</label>
+                <select required>
+                    <option disabled selected value="">Choose a movie</option>
+                    <option>Interstellar</option>
+                    <option>Joker</option>
+                    <option>Venom: The Last Dance</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Select Date:</label>
+                <input type="date" required />
+            </div>
+
+            <div class="form-group">
+                <label>Select Showtime:</label>
+                <div class="checkbox-group" id="showtime-group">
+                    <label><input type="checkbox" name="showtime" value="10am" /> 10:00 AM</label>
+                    <label><input type="checkbox" name="showtime" value="1pm" /> 1:00 PM</label>
+                    <label><input type="checkbox" name="showtime" value="4pm" /> 4:00 PM</label>
+                    <label><input type="checkbox" name="showtime" value="7pm" /> 7:00 PM</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Card Number:</label>
+                <input type="text" placeholder="XXXX-XXXX-XXXX-XXXX" required />
+            </div>
+
+            <div class="form-group">
+                <label>Name on Card:</label>
+                <input type="text" placeholder="Full Name" required />
+            </div>
+
+            <div class="form-group half">
+                <div>
+                    <label>Expiry Date:</label>
+                    <input type="month" required />
+                </div>
+                <div>
+                    <label>CVV:</label>
+                    <input type="text" placeholder="123" required />
+                </div>
+            </div>
+
+            <button type="submit" class="pay-button">Pay Now</button>
+        </form>
+    </section>
+
+    <footer id="contact">
+        <h2>Contact Us</h2>
+        <p>Email: dilanluqman84@gmail.com | Phone: +964 751 188 2004</p>
+        <p>Follow us:</p>
+        <div class="social-icons">
+            <i class="fab fa-facebook"></i>
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-instagram"></i>
+        </div>
+        <p>&copy; 2024 Suly Cinema</p>
+    </footer>
+
+    <script>
+        // Allow only one checkbox to be selected
+        const showtimeCheckboxes = document.querySelectorAll('#showtime-group input[type="checkbox"]');
+        showtimeCheckboxes.forEach(checkbox => {
+            checkbox.addEventListener('change', function () {
+                if (this.checked) {
+                    showtimeCheckboxes.forEach(other => {
+                        if (other !== this) other.checked = false;
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login | Suly Cinema</title>
+    <link rel="stylesheet" href="/logincss.css" />
+</head>
+
+<body>
+    <div class="wrapper">
+        <h1>🎬 Suly Cinema</h1>
+        <h2>Login</h2>
+
+        <ul class="messages">
+            <% if (typeof errors !='undefined' ) { %>
+                <% errors.forEach(error=> { %>
+                    <li class="error">
+                        <%= error.message %>
+                    </li>
+                    <% }) %>
+                        <% } %>
+
+                            <% if (messages.success_msg) { %>
+                                <li class="success">
+                                    <%= messages.success_msg %>
+                                </li>
+                                <% } %>
+
+                                    <% if (messages.error) { %>
+                                        <li class="error">
+                                            <%= messages.error %>
+                                        </li>
+                                        <% } %>
+        </ul>
+
+        <form action="/login" method="POST">
+            <div class="input-box">
+                <input name="email" type="text" placeholder="Email" required />
+            </div>
+            <div class="input-box">
+                <input name="password" type="password" placeholder="Password" required />
+            </div>
+
+            <div class="options">
+                <a href="/email">Forgot Password?</a>
+            </div>
+
+            <div class="input-box button">
+                <input type="submit" value="Login" />
+            </div>
+
+            <div class="text">
+                <p>Don't have an account? <a href="/signup">Signup now</a></p>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

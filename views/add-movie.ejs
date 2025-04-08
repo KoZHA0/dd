@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add Movie | Admin Panel</title>
+    <link rel="stylesheet" href="../add-movie.css" />
+</head>
+
+<body>
+    <header>
+        <div class="logo">Suly Cinema Admin</div>
+        <nav>
+            <ul>
+                <li><a href="admin.html">Dashboard</a></li>
+                <li><a href="/">Home</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="admin-panel">
+        <h1>Add a New Movie</h1>
+        <form class="admin-form" action="/admin/add-movie" method="POST">
+            <input type="text" name="title" placeholder="Movie Title" required />
+            <input type="text" name="genre" placeholder="Genre" required />
+            <input type="text" name="duration" placeholder="Duration (e.g., 2h 30m)" required />
+            <input type="text" name="language" placeholder="Language" required />
+            <input type="url" name="image_url" placeholder="Image URL" required />
+            <textarea name="description" placeholder="Description" rows="4" required></textarea>
+            <button type="submit" class="btn-advanced">Add Movie</button>
+        </form>
+    </main>
+</body>
+
+</html>

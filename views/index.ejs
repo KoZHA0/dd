@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suly Cinema</title>
+    <link rel="stylesheet" href="../cinema.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="logo">Suly Cinema</div>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/showtime">Showtimes</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <% if(val=='Login' ){ %>
+                    <li><a href="/<%= val %>">
+                            <%= val %>
+                        </a></li>
+                    <% } %>
+                        <% if(val=='Profile' ){ %>
+                            <li><a href="/profile">
+                                    <%= val %>
+                                </a></li>
+                            <% } %>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="overlay">
+            <h1>Welcome to Suly Cinema</h1>
+            <p>Experience the magic of movies like never before!</p>
+            <button>Book Tickets</button>
+        </div>
+    </section>
+
+    <!-- Showtimes Section -->
+    <section id="showtimes">
+        <h2>Now Showing</h2>
+        <div class="carousel">
+            <% movies.forEach(movie=> { %>
+                <div class="movie">
+                    <a href="/movies/<%= movie.id %>">
+                        <img src="<%= movie.image_url %>" alt="<%= movie.title %>">
+                    </a>
+                    <h3>
+                        <%= movie.title %>
+                    </h3>
+                    <p>Genre: <%= movie.genre %>
+                    </p>
+
+                    <!-- Add more fields like duration, language, etc. if needed -->
+                </div>
+                <% }); %>
+        </div>
+    </section>
+
+    <!-- Movie Details Section -->
+    <section id="movie-details" class="hidden">
+        <h2>Movie Details</h2>
+        <h3 id="movie-title"></h3>
+        <p id="movie-description"></p>
+        <button onclick="hideDetails()">Close</button>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <h2>Contact Us</h2>
+        <p>Email: dilanluqman84@gmail.com | Phone: +964 751 188 2004</p>
+        <p>Follow us:</p>
+        <div class="social-icons">
+            <i class="fab fa-facebook"></i>
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-instagram"></i>
+        </div>
+        <p>&copy; 2024 Suly Cinema</p>
+    </footer>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Delete Movies | Suly Cinema Admin</title>
+    <link rel="stylesheet" href="../delete.css" />
+
+
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="logo">Suly Cinema Admin</div>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/admin.html">Dashboard</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Delete Movies Section -->
+    <section id="showtimes">
+        <h2>Click a Movie to Delete</h2>
+        <div class="carousel">
+            <div class="movie" onclick="deleteMovie('Interstellar')">
+                <img src="/images/images (1).jpg" alt="Interstellar" />
+                <div class="delete-overlay">Delete</div>
+                <h3>Interstellar</h3>
+                <p>Genre: Action</p>
+            </div>
+
+            <div class="movie" onclick="deleteMovie('Joker')">
+                <img src="/images/images.jpg" alt="Joker" />
+                <div class="delete-overlay">Delete</div>
+                <h3>Joker</h3>
+                <p>Genre: Drama</p>
+            </div>
+
+            <div class="movie" onclick="deleteMovie('Venom: The Last Dance')">
+                <img src="/images/images (2).jpg" alt="Venom" />
+                <div class="delete-overlay">Delete</div>
+                <h3>Venom: The Last Dance</h3>
+                <p>Genre: Thriller</p>
+            </div>
+        </div>
+    </section>
+
+
+
+
+</body>
+
+</html>

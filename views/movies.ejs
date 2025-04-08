@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        <%= movie.title %> - Suly Cinema
+    </title>
+    <link rel="stylesheet" href="../movies.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">Suly Cinema</div>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/showtime">Showtimes</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <% if(val=='Login' ){ %>
+                    <li><a href="/<%= val %>">
+                            <%= val %>
+                        </a></li>
+                    <% }else { %>
+                        <li><a href="/profile">
+                                <%= val %>
+                            </a></li>
+                        <% } %>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="movie-container">
+        <div class="movie-poster">
+            <img src="<%= movie.image_url %>" alt="<%= movie.title %> Poster">
+        </div>
+        <div class="movie-details">
+            <h1>
+                <%= movie.title %>
+            </h1>
+            <p><strong>Genre:</strong>
+                <%= movie.genre %>
+            </p>
+            <p><strong>Duration:</strong>
+                <%= Math.floor(movie.duration / 60) %>h <%= movie.duration % 60 %>m
+            </p>
+            <p><strong>Description:</strong>
+                <%= movie.description %>
+            </p>
+            <a href="/payment"><button class="book-btn">
+                    <i class="fas fa-ticket-alt"></i> Book Now
+                </button>
+            </a>
+        </div>
+    </main>
+
+    <footer>
+        <p>Contact: dilanluqman84@gmail.com | +964 751 188 2004</p>
+        <div class="social-icons">
+            <i class="fab fa-facebook-f"></i>
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-instagram"></i>
+        </div>
+        <p>© 2024 Suly Cinema</p>
+    </footer>
+</body>
+
+</html>

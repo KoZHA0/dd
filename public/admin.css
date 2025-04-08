@@ -1,0 +1,74 @@
+/* Based on your homepage color scheme */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: linear-gradient(to right, #1f1c2c, #928dab);
+    color: #fff;
+    overflow-x: hidden;
+}
+
+header {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: #f8f8f8;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #fcb045;
+}
+
+.admin-panel {
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.admin-panel h1 {
+    font-size: 42px;
+    margin-bottom: 40px;
+}
+
+.admin-actions button {
+    margin: 15px;
+    padding: 15px 35px;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: #fcb045;
+    border: none;
+    color: #1f1c2c;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.admin-actions button:hover {
+    background-color: #ffda77;
+}
